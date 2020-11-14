@@ -1,0 +1,16 @@
+<h2>{{session.name}}</h2>
+<!--
+<h2 [textContent] = "name"></h2>
+<h2 textContent={{name}}></h2>
+-->
+<div>{{session.track}}</div>
+<!--
+<div [align]="alignement">MEAN Stack</div>
+-->
+<div>{{session.date}}</div>
+<div>{{session.local}}</div>
+<div class="tools">
+    <a class="delete">Details</a>
+    <a class="inscrire" (click)="inscrire()">Inscription</a>
+    <a class="partager">Partager</a>
+</div>
