@@ -1,16 +1,20 @@
 <h2>{{session.name}}</h2>
-<!--
-<h2 [textContent] = "name"></h2>
-<h2 textContent={{name}}></h2>
--->
 <div>{{session.track}}</div>
-<!--
-<div [align]="alignement">MEAN Stack</div>
--->
-<div>{{session.date}}</div>
-<div>{{session.local}}</div>
+<div>
+    Prévue le {{session.date | date : 'd MM y'}} pendant {{session.duree}} jours à {{session.local}}
+</div>
+
+<ng-template #ok> 
+    Encore {{ 20 - session.participants }} places sont disponibles
+</ng-template>
+<ng-template #notok>
+    Session compléte !
+</ng-template>
+
+<div>{{session.participants}} Participants</div>
+
 <div class="tools">
     <a class="delete">Details</a>
-    <a class="inscrire" (click)="inscrire()">Inscription</a>
+    <a [appInscriptionDisabled] = "session.isCompleted" (click)="inscrire()" class="inscrire">Inscription</a>
     <a class="partager">Partager</a>
 </div>

@@ -3,6 +3,5 @@
     <h1>Liste des sessions de formation</h1>
     <p class="description">Suivre les sessions auquels je veux participer</p>
   </header>
-  <app-session-item [session]="firstSession" (participantsChange)="nbrParticipantsChange($event)"></app-session-item>
-  <p class="description">Nombre total de participants : {{nbpart}}</p>
+  <app-session-item-list></app-session-item-list>
 </section>

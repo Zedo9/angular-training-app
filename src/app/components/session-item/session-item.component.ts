@@ -6,9 +6,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./session-item.component.css']
 })
 export class SessionItemComponent implements OnInit {
-  //name = 'Formation Web';
-  //alignement = 'right';
-  //couleur = 'red';
   @Input() session: any;
   @Output() participantsChange = new EventEmitter<any>();
   constructor() { }
@@ -19,12 +16,14 @@ export class SessionItemComponent implements OnInit {
 
   inscrire() {
     console.log("Nouvelle Inscription");
-    this.session.name = 'Formation Web Avancé';
-    this.session.particpants += 1;
-    console.log(`${this.session.particpants} Particpants`);
+    this.session.participants += 1;
+    console.log(`${this.session.participants} Particpants`);
     this.participantsChange.emit({
-      value: this.session.particpants
+      value: this.session.participants
     });  
+    if (this.session.participants >= 20) {
+      this.session.isCompleted = true;
+    }
   }
   
 }
