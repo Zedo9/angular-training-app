@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-session-item-list',
   templateUrl: './session-item-list.component.html',
-  styleUrls: ['./session-item-list.component.css']
+  styleUrls: ['./session-item-list.component.css'],
 })
 export class SessionItemListComponent implements OnInit {
   sessionItems = [
@@ -15,7 +15,7 @@ export class SessionItemListComponent implements OnInit {
       duree: 3,
       local: 'Lyon',
       participants: 0,
-      isCompleted : false
+      isCompleted: false,
     },
     {
       id: 2,
@@ -24,8 +24,8 @@ export class SessionItemListComponent implements OnInit {
       date: new Date('2018-08-10'),
       duree: 5,
       local: 'Paris',
-      participants: 5,
-      isCompleted : false
+      participants: 0,
+      isCompleted: false,
     },
     {
       id: 3,
@@ -35,11 +35,10 @@ export class SessionItemListComponent implements OnInit {
       duree: 5,
       local: 'Lyon',
       participants: 0,
-      isCompleted : false
-    }
+      isCompleted: false,
+    },
   ];
-  
-  constructor() { }
-  
-  ngOnInit() { }
+  constructor() {}
+
+  ngOnInit(): void {}
 }

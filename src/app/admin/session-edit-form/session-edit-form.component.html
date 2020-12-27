@@ -1,10 +1,7 @@
 <header>
   <h2>Modifier une session de formation</h2>
 </header>
-<form 
-  #sessionItemForm="ngForm" 
-  (ngSubmit)="editSession(sessionItemForm.value)"
->
+<form #sessionItemForm="ngForm" (ngSubmit)="editSession(sessionItemForm.value)">
   <ul>
     <li>
       <label for="name">Name</label>
@@ -16,27 +13,53 @@
     <li>
       <label for="track">Track</label>
       <select id="track" required [(ngModel)]="session.track" name="track">
-        <option *ngFor="let track of tracks" [value]="track">{{track}}
+        <option *ngFor="let track of tracks" [value]="track">
+          {{ track }}
         </option>
-      </select>{{session.track}}
+      </select>
+      {{ session.track }}
     </li>
     <i>
       <label for="date">Date</label>
-      <input type="date" name="date" id="date"  [(ngModel)]="session.date" required>
+      <input
+        type="date"
+        name="date"
+        id="date"
+        [(ngModel)]="session.date"
+        required
+      />
       <label for="duree">Days</label>
-      <input type="number" name="duree" id="duree"  [(ngModel)]="session.duree" required>
+      <input
+        type="number"
+        name="duree"
+        id="duree"
+        [(ngModel)]="session.duree"
+        required
+      />
     </i>
     <i>
-      <input type="text" name="adress" id="adress"  [(ngModel)]="session.adress"  #adress="ngModel" minlength="4" required>
-      <div *ngIf="adress.invalid && (adress.dirty || adress.touched)">
-      <div *ngIf="adress.errors.minlength">Minimum 4 caractères!</div>
-      <div *ngIf="adress.errors.required">Le champ adresse est obligatoire!</div>
-    </div>
+      <label for="adress">Adress</label>
+      <input
+        type="text"
+        name=" adress "
+        id=" adress "
+        [(ngModel)]="session.adress"
+        required
+      />
+      {{ session.adress }}
     </i>
     <i>
       <label for="participants">Participants</label>
-      <input type="number" name="participants" id="participants"  [(ngModel)]="session.participants" required>
+      <input
+        type="number"
+        name="participants"
+        id="participants"
+        [(ngModel)]="session.participants"
+        required
+      />
     </i>
   </ul>
-  <button type="submit" [disabled]="!sessionItemForm.form.valid">Modifier</button>
+  <button type="submit" [disabled]="!sessionItemForm.form.valid">
+    Modifier
+  </button>
 </form>
