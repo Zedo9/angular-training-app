@@ -1,29 +1,80 @@
-:host {
+* {
+  color: white;
+}
+.header {
+  background-color: #002060;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
+  height: 10%;
+  padding: 0.5em;
+  justify-content: space-between;
 }
-nav {
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.header-logo {
+  width: 15em;
   display: flex;
-  flex-direction: column;
-  width: 68px;
-  background-color: #53ace4;
+  align-items: center;
+  justify-content: space-between;
 }
-nav .icon {
-  width: 48px;
-  height: 48px;
-  margin: 10px;
+
+.logo {
+  width: 25%;
 }
-section {
-  width: 100%;
-  background-color: #32435b;
+.quit-button {
+  width: 25%;
 }
-section > header {
-  color: #ffffff;
-  padding: 10px;
+
+.content {
+  display: flex;
+  height: 90%;
 }
-section > header > h1 {
-  font-size: 2em;
+
+.header-quit {
+  display: flex;
+  width: 10em;
+  align-items: center;
+  justify-content: space-evenly;
 }
-section > header .description {
-  font-style: italic;
+
+.side-nav {
+  background-color: #002060;
+  width: 20%;
+  padding: 0.5em;
+}
+
+.main-content {
+  background-color: white;
+  width: 80%;
+}
+
+.nav-img {
+  width: 3.5em;
+}
+
+.nav-link {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px grey;
+  padding: 0.3em;
+}
+
+.chercher-session {
+  display: flex;
+  align-items: center;
+  padding: 0.3em;
+  margin-bottom: 2em;
+}
+.chercher-input {
+  margin: 1em;
+  padding: 0.5em;
 }

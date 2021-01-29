@@ -1,14 +1,43 @@
-<nav>
-  <a routerLink="./list" routerLinkActive="active">
-    <img src="assets/list.png" class="icon" />
-  </a>
-  <a routerLink="./add" routerLinkActive="active">
-    <img src="assets/add.png" class="icon" />
-  </a>
-  <a [routerLink]="['./edit', 1]" routerLinkActive="active">
-    <img src="assets/edit.png" class="icon" />
-  </a>
-</nav>
-<section>
-  <router-outlet></router-outlet>
-</section>
+<div class="header">
+  <div class="header-logo">
+    <img class="logo" src="assets/webinar.jpg" />
+    <span class="logo-text">Espace Admin</span>
+  </div>
+  <div class="header-quit">
+    <span class="logo-text">Date</span>
+    <img class="quit-button" src="assets/shut-down.svg" />
+  </div>
+</div>
+<div class="content">
+  <div class="side-nav">
+    <div class="chercher-session">
+      <img class="nav-img" src="assets/chercher.png" />
+      <input
+        class="chercher-input"
+        placeholder="Chercher une session"
+        type="text"
+      />
+    </div>
+    <nav>
+      <div class="nav-item">
+        <img class="nav-img" src="assets/dashboard.png" />
+        <a class="nav-link">Dashboard</a>
+      </div>
+      <div class="nav-item">
+        <img class="nav-img" src="assets/sessions.png" />
+        <a class="nav-link">Sessions</a>
+      </div>
+      <div class="nav-item">
+        <img class="nav-img" src="assets/formateurs.png" />
+        <a class="nav-link">Formateurs</a>
+      </div>
+      <div class="nav-item">
+        <img class="nav-img" src="assets/participants.png" />
+        <a class="nav-link">Participants</a>
+      </div>
+    </nav>
+  </div>
+  <div class="main-content">
+    <app-dashboard-main></app-dashboard-main>
+  </div>
+</div>

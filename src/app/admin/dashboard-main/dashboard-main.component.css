@@ -1,0 +1,38 @@
+.container {
+  padding: 1em;
+}
+.upper-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.7em;
+  height: 11em;
+}
+
+.info-box-img {
+  width: 10em;
+}
+
+.info-box-data {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-purple {
+  background-color: purple;
+}
+
+.bg-orange {
+  background-color: orange;
+}

@@ -8,6 +8,8 @@ import { SessionEditFormComponent } from './session-edit-form/session-edit-form.
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { SessionsManagementComponent } from './sessions-management/sessions-management.component';
+import { DashboardMainComponent } from './dashboard-main/dashboard-main.component';
 
 const adminRoutes: Routes = [
   {
@@ -29,6 +31,8 @@ const adminRoutes: Routes = [
     SessionItemListComponent,
     SessionAddFormComponent,
     SessionEditFormComponent,
+    SessionsManagementComponent,
+    DashboardMainComponent,
   ],
   imports: [RouterModule.forChild(adminRoutes), CommonModule, FormsModule],
   bootstrap: [AdminComponent],
