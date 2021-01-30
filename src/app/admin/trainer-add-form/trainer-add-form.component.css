@@ -1,0 +1,28 @@
+label {
+  font-weight: bold;
+}
+
+* {
+  font-size: 1em;
+}
+
+input,
+select {
+  padding: 0.1em;
+  border: none;
+  border-bottom: solid 1px #002060;
+  outline: none;
+}
+select:focus,
+input:focus {
+  border-bottom: solid 1px #4cb5ab;
+}
+
+tr,
+td {
+  padding: 0.8em;
+}
+
+button {
+  padding: 0.5em;
+}

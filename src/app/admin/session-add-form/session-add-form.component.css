@@ -1,6 +1,7 @@
 :host {
   display: block;
   padding: 10px;
+  min-height: 90vh;
 }
 ul {
   list-style-type: none;

@@ -1,0 +1,64 @@
+<form
+  #formateurAddForm="ngForm"
+  (ngSubmit)="addFormateur(formateurAddForm.value)"
+>
+  <table>
+    <tr>
+      <td>
+        <label for="nom">Nom</label>
+      </td>
+      <td>
+        <input type="text" name="nom" id="nom" ngModel required />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="prenom">Prenom</label>
+      </td>
+      <td>
+        <input type="text" name="prenom" id="prenom" ngModel required />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="email">Email</label>
+      </td>
+      <td>
+        <input type="email" name="email" id="email" ngModel required />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="adresse">Adresse</label>
+      </td>
+      <td>
+        <input type="text" name="adresse" id="adresse" ngModel required />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="domaine">Domaine</label>
+      </td>
+      <td>
+        <select name="track" id="track" ngModel>
+          <option value="MEAN">MEAN Stack</option>
+          <option value="Angular">Angular</option>
+          <option value="NodeJS">NodeJS</option>
+          <option value="Symphony">Symphony</option>
+          <option value="Laravel">Laravel</option>
+          <option value="Ionic">Ionic</option>
+          <option value="Android">Android</option>
+          <option value="Xamarin">Xamarin</option>
+          <option value="Swift">Swift</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th colspan="2">
+        <button type="submit" [disabled]="!formateurAddForm.form.valid">
+          Enregistrer
+        </button>
+      </th>
+    </tr>
+  </table>
+</form>

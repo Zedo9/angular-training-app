@@ -1,4 +1,4 @@
-import { Session } from './session';
+import { Session } from '../Models/session';
 export const SESSIONITEMS: Session[] = [
   {
     id: 1,

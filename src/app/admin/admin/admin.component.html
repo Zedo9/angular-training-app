@@ -21,15 +21,15 @@
     <nav>
       <div class="nav-item">
         <img class="nav-img" src="assets/dashboard.png" />
-        <a class="nav-link">Dashboard</a>
+        <a class="nav-link" routerLink="./dashboard">Dashboard</a>
       </div>
       <div class="nav-item">
         <img class="nav-img" src="assets/sessions.png" />
-        <a class="nav-link">Sessions</a>
+        <a class="nav-link" routerLink="./sessions">Sessions</a>
       </div>
       <div class="nav-item">
         <img class="nav-img" src="assets/formateurs.png" />
-        <a class="nav-link">Formateurs</a>
+        <a routerLink="./formateurs" class="nav-link">Formateurs</a>
       </div>
       <div class="nav-item">
         <img class="nav-img" src="assets/participants.png" />
@@ -38,6 +38,6 @@
     </nav>
   </div>
   <div class="main-content">
-    <app-dashboard-main></app-dashboard-main>
+    <router-outlet></router-outlet>
   </div>
 </div>

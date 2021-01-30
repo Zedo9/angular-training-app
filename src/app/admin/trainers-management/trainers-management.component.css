@@ -1,0 +1,13 @@
+* {
+  color: black;
+}
+img {
+  width: 3em;
+  margin-right: 1em;
+}
+.top-container {
+  padding: 0.5em;
+}
+section {
+  padding: 0.5em;
+}

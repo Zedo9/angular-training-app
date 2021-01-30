@@ -5,7 +5,6 @@ import { FakesessionitemService } from '../fakesessionitem.service';
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
-  providers: [FakesessionitemService],
 })
 export class AdminComponent implements OnInit {
   constructor() {}
