@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { SESSIONITEMS } from './Data/sessions';
 
@@ -24,5 +25,9 @@ export class FakesessionitemService {
 
   getSession(id: number) {
     return SESSIONITEMS[id - 1];
+  }
+
+  getSessionCount(track: string) {
+    return SESSIONITEMS.filter((item) => item.track === track).length;
   }
 }

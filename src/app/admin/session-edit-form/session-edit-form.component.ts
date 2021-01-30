@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FakesessionitemService } from '../fakesessionitem.service';
 import { Session } from '../Models/session';
 
@@ -23,7 +23,8 @@ export class SessionEditFormComponent implements OnInit {
   ];
   constructor(
     private route: ActivatedRoute,
-    private sessionItemService: FakesessionitemService
+    private sessionItemService: FakesessionitemService,
+    private router: Router
   ) {}
   ngOnInit() {
     this.sub = this.route.params.subscribe((params) => {
@@ -33,6 +34,6 @@ export class SessionEditFormComponent implements OnInit {
     this.session = this.sessionItemService.getSession(this.id);
   }
   editSession(sessionItem) {
-    console.log(sessionItem);
+    this.router.navigateByUrl('admin/sessions/list');
   }
 }

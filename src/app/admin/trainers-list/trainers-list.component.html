@@ -18,10 +18,12 @@
       <td>{{ formateur.email }}</td>
       <td>{{ formateur.domaine }}</td>
       <td>
-        <a><img src="assets/modifier.png" /></a>
+        <a [routerLink]="['../edit', formateur.id]"
+          ><img src="assets/modifier.png"
+        /></a>
       </td>
       <td>
-        <a><img src="assets/supprimer.png" /></a>
+        <a (click)="onDelete(formateur)"><img src="assets/supprimer.png" /></a>
       </td>
     </tr>
   </table>

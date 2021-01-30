@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FakeFormateurServiceService } from '../fake-formateur-service.service';
 import { Formateur } from '../Models/Formateur';
 
 @Component({
@@ -7,9 +9,15 @@ import { Formateur } from '../Models/Formateur';
   styleUrls: ['./trainer-add-form.component.css'],
 })
 export class TrainerAddFormComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private formateurService: FakeFormateurServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
-  addFormateur(formateur: Formateur) {}
+  addFormateur(formateur: Formateur) {
+    this.formateurService.add(formateur);
+    this.router.navigateByUrl('admin/formateurs/list');
+  }
 }

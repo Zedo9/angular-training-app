@@ -26,7 +26,7 @@
   width: 25%;
 }
 .quit-button {
-  width: 25%;
+  width: 100%;
 }
 
 .content {
@@ -36,7 +36,7 @@
 
 .header-quit {
   display: flex;
-  width: 10em;
+  width: 20em;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -78,4 +78,8 @@
 .chercher-input {
   margin: 1em;
   padding: 0.5em;
+}
+
+a {
+  width: 3em;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FakesessionitemService } from '../fakesessionitem.service';
 
 @Component({
@@ -7,11 +8,14 @@ import { FakesessionitemService } from '../fakesessionitem.service';
   styleUrls: ['./session-add-form.component.css'],
 })
 export class SessionAddFormComponent implements OnInit {
-  constructor(private sessionItemService: FakesessionitemService) {}
+  constructor(
+    private sessionItemService: FakesessionitemService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
   addSession(sessionItem) {
-    console.log(sessionItem);
     this.sessionItemService.add(sessionItem);
+    this.router.navigateByUrl('admin/sessions/list');
   }
 }

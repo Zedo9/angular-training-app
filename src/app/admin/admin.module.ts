@@ -14,6 +14,11 @@ import { FakesessionitemService } from './fakesessionitem.service';
 import { TrainersManagementComponent } from './trainers-management/trainers-management.component';
 import { TrainersListComponent } from './trainers-list/trainers-list.component';
 import { TrainerAddFormComponent } from './trainer-add-form/trainer-add-form.component';
+import { TrainersEditFormComponent } from './trainers-edit-form/trainers-edit-form.component';
+import { ParticipantsManagementComponent } from './participants-management/participants-management.component';
+import { ParticipantsAddFormComponent } from './participants-add-form/participants-add-form.component';
+import { ParticipantsEditFormComponent } from './participants-edit-form/participants-edit-form.component';
+import { ParticipantsListComponent } from './participants-list/participants-list.component';
 
 const adminRoutes: Routes = [
   {
@@ -40,8 +45,22 @@ const adminRoutes: Routes = [
         component: TrainersManagementComponent,
         children: [
           { path: 'list', component: TrainersListComponent },
-          { path: 'edit/:id', component: SessionEditFormComponent },
+          { path: 'edit/:id', component: TrainersEditFormComponent },
           { path: 'add', component: TrainerAddFormComponent },
+          {
+            path: '',
+            redirectTo: 'list',
+            pathMatch: 'full',
+          },
+        ],
+      },
+      {
+        path: 'participants',
+        component: ParticipantsManagementComponent,
+        children: [
+          { path: 'list', component: ParticipantsListComponent },
+          { path: 'edit/:id', component: ParticipantsEditFormComponent },
+          { path: 'add', component: ParticipantsAddFormComponent },
           {
             path: '',
             redirectTo: 'list',
@@ -65,6 +84,11 @@ const adminRoutes: Routes = [
     TrainersManagementComponent,
     TrainersListComponent,
     TrainerAddFormComponent,
+    TrainersEditFormComponent,
+    ParticipantsManagementComponent,
+    ParticipantsAddFormComponent,
+    ParticipantsEditFormComponent,
+    ParticipantsListComponent,
   ],
   imports: [RouterModule.forChild(adminRoutes), CommonModule, FormsModule],
   bootstrap: [AdminComponent],

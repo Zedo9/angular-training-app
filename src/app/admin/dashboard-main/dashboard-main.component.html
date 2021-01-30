@@ -3,24 +3,48 @@
     <div class="info-box bg-orange">
       <img class="info-box-img" src="assets/sessions.png" />
       <span class="info-box-data">
-        <p>5</p>
+        <p>{{ nbSessions }}</p>
         <p>Sessions</p>
       </span>
     </div>
     <div class="info-box bg-green">
       <img class="info-box-img" src="assets/participants.png" />
       <span class="info-box-data">
-        <p>5</p>
+        <p>{{ nbParticipants }}</p>
         <p>Participants</p>
       </span>
     </div>
     <div class="info-box bg-purple">
       <img class="info-box-img" src="assets/formateurs.png" />
       <span class="info-box-data">
-        <p>5</p>
+        <p>{{ nbFormateurs }}</p>
         <p>Formateurs</p>
       </span>
     </div>
   </div>
-  <div class="lower-part"></div>
+  <div class="lower-part">
+    <table>
+      <thead>
+        <th>Track</th>
+        <th>Nombre de Sessions</th>
+      </thead>
+      <tr *ngFor="let track of tracks">
+        <td>{{ track }}</td>
+        <td>{{ this.sessionCount(track) }}</td>
+      </tr>
+    </table>
+    <table>
+      <thead>
+        <th colspan="2">Top Formateurs</th>
+      </thead>
+      <tr>
+        <td><img class="profile-img" src="assets/profile.png" /></td>
+        <td>Ahmed Haj Ali</td>
+      </tr>
+      <tr>
+        <td><img class="profile-img" src="assets/profile.png" /></td>
+        <td>Mohamed Belhedi</td>
+      </tr>
+    </table>
+  </div>
 </div>

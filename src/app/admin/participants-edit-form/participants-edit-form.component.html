@@ -1,0 +1,98 @@
+<form
+  #participantEditForm="ngForm"
+  (ngSubmit)="editParticipant(participantEditForm.value)"
+>
+  <table>
+    <tr>
+      <td>
+        <label for="nom">Nom</label>
+      </td>
+      <td>
+        <input
+          type="text"
+          name="nom"
+          id="nom"
+          [(ngModel)]="participant.nom"
+          required
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="prenom">Prenom</label>
+      </td>
+      <td>
+        <input
+          type="text"
+          name="prenom"
+          id="prenom"
+          [(ngModel)]="participant.prenom"
+          required
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="email">Email</label>
+      </td>
+      <td>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          [(ngModel)]="participant.email"
+          required
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="adresse">Adresse</label>
+      </td>
+      <td>
+        <input
+          type="text"
+          name="adresse"
+          id="adresse"
+          [(ngModel)]="participant.adresse"
+          required
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="adresse">Societe</label>
+      </td>
+      <td>
+        <input
+          type="text"
+          name="societe"
+          id="societe"
+          [(ngModel)]="participant.societe"
+          required
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="adresse">Poste</label>
+      </td>
+      <td>
+        <input
+          type="text"
+          name="poste"
+          id="poste"
+          [(ngModel)]="participant.poste"
+          required
+        />
+      </td>
+    </tr>
+    <tr>
+      <th colspan="2">
+        <button type="submit" [disabled]="!participantEditForm.form.valid">
+          Enregistrer
+        </button>
+      </th>
+    </tr>
+  </table>
+</form>
